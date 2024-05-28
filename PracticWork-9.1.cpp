@@ -15,7 +15,7 @@ int main()
     int timeDH = (timeDeparture[0] - 48) * 10 + (timeDeparture[1] - 48); //-48 потому что 0 в таблице аски это 48ой символ
     int timeDM = (timeDeparture[3] - 48) * 10 + (timeDeparture[4] - 48);
 
-    if (timeDH >= 24 || timeDH < 0 || timeDM >= 60 || timeDM < 0) {
+    if (timeDH >= 24 || timeDH < 0 || timeDM >= 60 || timeDM < 0 || timeDeparture.length() > 5) {
         cout << "Не правильный формат времени\n";
         goto enterDeparture;
     }
@@ -28,7 +28,7 @@ int main()
     int timeAH = (timeArrival[0] - 48) * 10 + (timeArrival[1] - 48);
     int timeAM = (timeArrival[3] - 48) * 10 + (timeArrival[4] - 48);
 
-    if (timeAH >= 24 || timeAH < 0 || timeAM >= 60 || timeAM < 0) {
+    if (timeAH >= 24 || timeAH < 0 || timeAM >= 60 || timeAM < 0 || timeArrival.length() > 5) {
         cout << "Не правильный формат времени\n";
         goto enterArrival;
     }
